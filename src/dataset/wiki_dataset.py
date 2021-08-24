@@ -156,12 +156,12 @@ class wiki_qlm_trainset(Dataset):
         self.neg_val = neg_val
         self.max_pairs = params.max_pairs
 
-        if os.path.exists("/home/puxuan"):
+        if os.path.exists("/home/your_user_name"):
             # gpu server
-            data_path = f"/home/puxuan/Multilingual-Wiki/data/{self.lang_pair}"
+            data_path = f"/home/your_user_name/Multilingual-Wiki/data/{self.lang_pair}"
         else:
             # asimov cluster
-            data_path = f"/mnt/home/puxuan/Multilingual-Wiki/data/{self.lang_pair}"
+            data_path = f"/mnt/home/your_user_name/Multilingual-Wiki/data/{self.lang_pair}"
 
         with open(f"{data_path}/{self.source_lang}_np.pkl", 'rb') as fin:
             self.source_np = pickle.load(fin)
