@@ -7,12 +7,13 @@ Note that this is the PaddlePaddle version of the implementation,
 which is largely motivated and modified from the XLM codebase by Facebook AI Research, 
 and the Transformers library by HuggingFace.  
 
-There is also a Pytorch version, which is available on https://github.com/PxYu/Pretraining-CLIR.
+There is also a Pytorch version, which is available upon request. 
 
 ## Usage
 
-## Citation
-If you find our code or paper useful, please consider citing our work.
+## Reference
+If you find our work useful, please consider citing it as follows:
+```
 @inproceedings{yu2021cross,
   title={Cross-lingual Language Model Pretraining for Retrieval},
   author={Yu, Puxuan and Fei, Hongliang and Li, Ping},
@@ -20,3 +21,4 @@ If you find our code or paper useful, please consider citing our work.
   pages={1029--1039},
   year={2021}
 }
+```
