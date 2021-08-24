@@ -10,6 +10,21 @@ and the Transformers library by HuggingFace.
 There is also a Pytorch version, which is available upon request. 
 
 ## Usage
+### Pretraining data download
+Download our preprocessed multi-lingual Wiki data for pretraining: [Multi-lingual Wiki](https://drive.google.com/file/d/1C6RQ9tVLshn1RVDFEo42Nk_EPHx4Lwv9/view?usp=sharing) and unzip it to your desired data path. 
+
+### Pretraining
+```
+cd your_code_dir
+bash pretrain.sh or pretrain_single_card.sh
+```
+Note that data paths were hard-coded in "home_dir" variable of finetune-search.py and "data_dir" in src/dataset/wiki_dataset.py. Please replace them with your desired data path. 
+
+### Finetuning for cross-lingual retrieval
+CLEF evaluation data used in our paper is licensed hence we cannot open source it. But if you have it, you can use the pretrained model to finetune your retrieval model. You can also apply the pretrained model to your other downstream cross-lingual tasks.
+```
+bash finetune.sh your_pretrained_model_dir your_finetune_data_name("clef", "wiki-clir", "mix") src_lang dst_lang
+```
 
 ## Reference
 If you find our work useful, please consider citing it as follows:
