@@ -18,12 +18,12 @@ Download our preprocessed multi-lingual Wiki data for pretraining: [Multi-lingua
 cd your_code_dir
 bash pretrain.sh or pretrain_single_card.sh
 ```
-Note that data paths were hard-coded in "home_dir" variable of finetune-search.py and "data_dir" in src/dataset/wiki_dataset.py. Please replace them with your desired data path. 
+Note that data paths were hard-coded in the "home_dir" variable of finetune-search.py and the "data_dir" in src/dataset/wiki_dataset.py. Please replace them with your own data path. 
 
 ### Finetuning for cross-lingual retrieval
 CLEF evaluation data used in our paper is licensed hence we cannot open source it. But if you have it, you can use the pretrained model to finetune your retrieval model. You can also apply the pretrained model to your other downstream cross-lingual tasks.
 ```
-bash finetune.sh your_pretrained_model_dir your_finetune_data_name("clef", "wiki-clir", "mix") src_lang dst_lang
+bash finetune.sh your_pretrained_model_dir your_finetune_data_name("clef"/"wiki-clir"/"mix") src_lang dst_lang
 ```
 
 ## Reference
